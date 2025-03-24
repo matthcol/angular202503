@@ -12,6 +12,10 @@ nvm install 22.14.0
 nvm use 22.14.0
 ```
 
+## IDE
+- VS Code: https://code.visualstudio.com/
+- Webstorm: https://www.jetbrains.com/webstorm/
+
 ## JavaScript/EcmaScript
 - MDN: https://developer.mozilla.org/fr/docs/Web/JavaScript
 - W3Schools: https://www.w3schools.com/js/default.asp
@@ -24,3 +28,10 @@ nvm use 22.14.0
 - Main website: https://angular.dev/
 - Tutorial: https://angular.dev/tutorials
 - Playground: https://angular.dev/playground
+
+### Install Angular
+Globally: `npm install -g @angular/cli`
+
+or locally: `npm install @angular/cli`
+
+Extension VSCode: Angular Language Service
