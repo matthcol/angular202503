@@ -29,9 +29,25 @@ nvm use 22.14.0
 - Tutorial: https://angular.dev/tutorials
 - Playground: https://angular.dev/playground
 
-### Install Angular
+### Install Angular (latest stable version)
 Globally: `npm install -g @angular/cli`
 
-or locally: `npm install @angular/cli`
+or locally (project directory): `npm install @angular/cli`
 
+Tester: 
+```
+ng --version
+ng version
+npx ng --version
+npx ng version
+```
+
+### Install Angular (older version)
+NB: globally add flag `-g`
+```
+npm install @angular/cli@18
+ng version
+```
+
+### IDE
 Extension VSCode: Angular Language Service

@@ -118,7 +118,7 @@ console.log(totalLetter0)
 console.log()
 cities.forEach((city, i) => console.log(i + 1, city))
 
-// mettre (dans un tableau) les villes commençant par B en majuscule, 
+// Exercice: mettre (dans un tableau) les villes commençant par B en majuscule, 
 // associées à un index commençant par 1
 // Example: [[1, "Bayonne"], [2, "Bordeaux"], ...]
 
@@ -148,5 +148,46 @@ console.log(
 const [nb, cty] = indexedCities[0]
 console.log(nb, cty.toLowerCase())
 
-// Variante: mettre la position de départ
+
+// Variante exercice (TODO): mettre la position de départ
 // Example: [[4, "Bayonne"], [5, "Bordeaux"], ...]
+
+
+// Typescript: array vs tuple (class Array)
+const numbers1: number[] = [11, 33, 44] // dynamique, longueur quelconque
+const coords3d: [number, number, number] = [11, 33, 44] // triplet (x, y, z) // longueur + type de chaque case
+
+const ville1: [string, number, string] = ['Montauban', 62_487, '81000'] // triplet (nom, population, code postal)
+const ville2: (string | number)[] = ['Montauban', 62_487, '81000']
+const ville3: any[] = ['Montauban', 62_487, '81000']
+
+// Exercice: faire un parcours du tableau indexedCities = [[1, "BAYONNE"], [2, "BORDEAUX"], [3, "BREST"]]
+//     en utilisant la destructuration 
+// 2 solutions: boucle for ou méthode .forEach
+
+// sans destructuration (indirection)
+console.log()
+for (let i in indexedCities){
+    console.log('*', indexedCities[i])
+    console.log('\t position: ', indexedCities[i][0])
+    console.log('\t ville: ', indexedCities[i][1])
+}
+
+console.log()
+for (let positionVille of indexedCities){
+    console.log('*', positionVille)
+    console.log('\t position: ', positionVille[0])
+    console.log('\t ville: ', positionVille[1])
+}
+
+// avec destructuration (better !)
+console.log()
+for (const [position, ville] of indexedCities){
+    console.log('^', position, ville.toLowerCase())
+}
+
+console.log()
+indexedCities.forEach(
+    ([position, ville]) => console.log('~', position, ville.toLowerCase())
+)
+
