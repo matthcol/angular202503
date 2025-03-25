@@ -33,13 +33,23 @@
 <button (click)="resetPrefecture()">Reset préfecture(s)</button>
 
 <h2>Liste de villes (sous composant)</h2>
+Disposition: <input 
+    (change)="changeDisposition($event)"
+    type="text" 
+    list="disposition-list" 
+    />
+<datalist id="disposition-list">
+    <option value="v1"></option>
+    <option value="v2"></option>
+    <option value="rien"></option>
+</datalist>
 @for (city of cities; track $index) {
      <!-- disposition par défaut -->
     <!-- <app-city-card [city]="city" />  -->
     
     <!-- disposition fixe -->
-    <app-city-card [city]="city" disposition="v2"/> 
+    <!-- <app-city-card [city]="city" disposition="v2"/>  -->
     
     <!-- disposition  dynamique -->
-    <!-- <app-city-card [city]="city" [disposition]="disposition"/>  -->
+    <app-city-card [city]="city" [disposition]="disposition"/> 
 }

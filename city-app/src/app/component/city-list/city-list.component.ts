@@ -13,6 +13,8 @@ export class CityListComponent {
 
   today = new Date()
 
+  disposition = 'v1'
+
   cities: City[] = [
     {
       name: 'Toulouse',
@@ -61,5 +63,9 @@ export class CityListComponent {
     // actualiser le modèle (solution provisoire)
     // mieux: two-way binding
     city.prefecture = inputElement.checked
+  }
+
+  changeDisposition(event: Event){
+    this.disposition = (event.target as HTMLInputElement).value
   }
 }

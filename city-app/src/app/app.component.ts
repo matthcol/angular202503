@@ -6,7 +6,7 @@ import { CityListComponent } from "./component/city-list/city-list.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CityCardSimpleComponent, CityCardComponent, CityListComponent],
+  imports: [RouterOutlet, CityCardSimpleComponent, CityListComponent],
 
   // HTML part: inline avec template ou autre fichier avec templateUrl
   templateUrl: './app.component.html',
