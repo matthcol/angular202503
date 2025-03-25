@@ -1,0 +1,4 @@
+/* selector angular :host => current component */
+:host h1 {
+    color: rgb(208, 21, 143)
+}
