@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { City } from '../../interface/city';
 import { UpperCasePipe } from '@angular/common';
 import { NotDefinedPipe } from '../../pipe/not-defined.pipe';
@@ -11,9 +11,12 @@ import { NotDefinedPipe } from '../../pipe/not-defined.pipe';
   styleUrl: './city-card.component.css'
 })
 export class CityCardComponent {
-   city: City = {
-      name: 'Toulouse',
-      // population: 500_000,
-      // zipcode: '2a000',
-    }
+  //  city: City = {
+  //     name: 'Toulouse',
+  //     // population: 500_000,
+  //     // zipcode: '2a000',
+  //   }
+
+  @Input() disposition = 'v1';
+  @Input() city!: City; // = { name: 'Jolie Ville'}
 }

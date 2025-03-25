@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { City } from '../../interface/city';
 import { DatePipe } from '@angular/common';
+import { CityCardComponent } from "../city-card/city-card.component";
 
 @Component({
   selector: 'app-city-list',
-  imports: [DatePipe],
+  imports: [DatePipe, CityCardComponent],
   templateUrl: './city-list.component.html',
   styleUrl: './city-list.component.css'
 })
