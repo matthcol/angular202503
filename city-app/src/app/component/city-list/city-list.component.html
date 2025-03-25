@@ -1,8 +1,9 @@
 <h2>Liste de villes: {{cities.length}}</h2>
 <p>Dernière révision (format custom): {{today | date:'dd/MM/y'}}</p>
 <p>Dernière révision (shortdate format): {{today | date:'shortDate'}}</p>
-<p>Dernière révision (litt. format): {{today | date:'EEEE dd MMMM y'}}</p>
-<p>Dernière révision (litt. format): {{today | date:'EEEE dd MMMM y':undefined:'es-ES'}}</p>
+<p>Dernière révision (format custom mots): {{today | date:'EEEE dd MMMM y'}}</p>
+<p>Dernière révision (longdate format): {{today | date:'longDate'}}</p>
+<p>Dernière révision (format custom mots ES): {{today | date:'EEEE dd MMMM y':undefined:'es-ES'}}</p>
 <ul>
     <!-- utiliser var spéciales: $index, $first, $last, $count, $odd, $even -->
     @for (city of cities; track $index) {

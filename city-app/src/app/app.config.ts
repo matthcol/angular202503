@@ -13,6 +13,6 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }), 
     provideRouter(routes),
-    {provide: LOCALE_ID, useValue: 'fr-FR'},
+    {provide: LOCALE_ID, useValue: 'fr-FR'}, // locale par défaut
   ]
 };
