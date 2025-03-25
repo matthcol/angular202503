@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
 import { City } from '../../interface/city';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-city-list',
-  imports: [],
+  imports: [DatePipe],
   templateUrl: './city-list.component.html',
   styleUrl: './city-list.component.css'
 })
 export class CityListComponent {
+
+  today = new Date()
 
   cities: City[] = [
     {
@@ -47,5 +50,15 @@ export class CityListComponent {
   resetPrefecture(){
     // met à faux la propriété prefecture de toutes les villes
     this.cities.forEach(city => city.prefecture = false)
+  }
+
+  changePrefectureState(indexCity: number, event: Event) {
+    const city = this.cities[indexCity]
+    console.log(`change prefecture of city ${city.name}, old state = ${city.prefecture}`)
+    const inputElement =  event.target as HTMLInputElement;
+    console.log(`new state = ${inputElement.checked}`)
+    // actualiser le modèle (solution provisoire)
+    // mieux: two-way binding
+    city.prefecture = inputElement.checked
   }
 }

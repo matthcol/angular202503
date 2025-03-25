@@ -4,6 +4,9 @@
     <ul>
         <li>population: {{city.population ?? 'non renseignée'}}</li>
         <li>code postal: {{city.zipcode?.toUpperCase() ?? 'non renseigné'}}</li>
+        <li>code postal (bis): {{city.zipcode | uppercase | notDefined:'non renseigné' }}</li>
+        <li>code postal (bis): {{city.zipcode | uppercase | notDefined:'à définir' }}</li>
+        <li>code postal (bis): {{city.zipcode | uppercase | notDefined }}</li>
     </ul>
     Caractéristiques (v2):
     <ul>
