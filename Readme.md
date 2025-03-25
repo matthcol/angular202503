@@ -51,3 +51,28 @@ ng version
 
 ### IDE
 Extension VSCode: Angular Language Service
+
+## Angular commands (CLI)
+https://angular.dev/cli
+
+### start project
+ng new city-app
+
+### add element to the project
+https://angular.dev/cli/generate
+#### Interfaces
+```
+ng generate interface interface/city
+ng g i interface/department 
+```
+#### Component
+```
+ng generate component component/city-card
+ng g c component/city-card --skip-tests
+ng g c component/city-card-simple --skip-tests --inline-style --inline-template
+```
+
+### Structures de contrôles
+@if, @for, @case, ...
+- https://angular.dev/api/core/@if
+- https://angular.dev/api/core/@for

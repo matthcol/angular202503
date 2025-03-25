@@ -1,1 +1,19 @@
-<p>city-card works!</p>
+<section>
+    <h3>{{city.name}}</h3>
+    Caractéristiques (v1):
+    <ul>
+        <li>population: {{city.population ?? 'non renseignée'}}</li>
+        <li>code postal: {{city.zipcode?.toUpperCase() ?? 'non renseigné'}}</li>
+    </ul>
+    Caractéristiques (v2):
+    <ul>
+        @if (city.population) {
+            <li>population: {{city.population}}</li>
+        }
+        @if (city.zipcode) {
+            <li>code postal: {{city.zipcode.toUpperCase()}}</li>
+        } @else {
+            <li>pas de code postal</li>
+        }
+    </ul>
+  </section>
