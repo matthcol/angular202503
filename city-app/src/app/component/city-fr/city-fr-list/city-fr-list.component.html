@@ -1,1 +1,7 @@
-<p>city-fr-list works!</p>
+<section>
+    <ul>
+        @for (city of cities; track city.id) {
+            <li><a [routerLink]="['/city-fr/detail', city.id]">{{city.nom_standard}}</a></li>
+        }
+    </ul>
+</section>>

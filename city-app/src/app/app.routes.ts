@@ -16,7 +16,7 @@ export const routes: Routes = [
         canActivate: [randomGuard], component: CityCardSimpleComponent},
     {path: 'city-fr', children:[
         {path: '', component: CityFrListComponent},
-        {path: 'detail', component: CityFrDetailComponent},
+        {path: 'detail/:id', component: CityFrDetailComponent},
         {path: 'create', component: CityFrCreateComponent},
     ]},
     // NB1: possibilité d'avoir du chargement dynamique si beaucoup de routes

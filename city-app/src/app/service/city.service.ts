@@ -21,4 +21,8 @@ export class CityService {
     return this.httpClient.get<CityFr[]>(this.serviceURL)
   }
 
+  getCityById(id: string): Observable<CityFr>{
+    // TODO: query get with id
+  }
+
 }
