@@ -60,6 +60,14 @@ ng new city-app
 
 ### add element to the project
 https://angular.dev/cli/generate
+
+- class (cl), enum (e), interface (i)
+- guard (g), pipe (p), interceptor
+- component (c)
+- service (s), service-worker, web-worker, resolver
+- config, directive
+- module (m), application, app-shell, library
+
 #### Interfaces
 ```
 ng generate interface interface/city
@@ -76,3 +84,28 @@ ng g c component/city-card-simple --skip-tests --inline-style --inline-template
 @if, @for, @case, ...
 - https://angular.dev/api/core/@if
 - https://angular.dev/api/core/@for
+
+### Pipes
+Builtins and customs:
+https://angular.dev/guide/templates/pipes
+
+```
+ng g p pipe/not-defined
+```
+
+### Guards
+```
+ng g g guard/random
+```
+
+### Service
+```
+ng g s service/city
+```
+
+## JSON Server
+https://github.com/typicode/json-server
+```
+npm install --save-dev json-server
+npx json-server data/cities82.json
+```
