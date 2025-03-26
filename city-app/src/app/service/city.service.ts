@@ -23,6 +23,7 @@ export class CityService {
 
   getCityById(id: string): Observable<CityFr>{
     // TODO: query get with id
+    return new Observable()
   }
 
 }

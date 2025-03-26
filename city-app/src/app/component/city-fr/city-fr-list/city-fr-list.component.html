@@ -1,6 +1,20 @@
 <section>
+    <h2>Liste villes de France</h2>
+    <p>
+        <label for="search">Filtre:</label>
+        <input  
+            id="search" 
+            type="text" 
+            [(ngModel)]="searchName"
+            (ngModelChange)="changeSearchName($event)"
+        />
+        @if (filterActivated) {
+            <span class="active">*actif</span>
+        }
+    </p>
+    <p>(filtre = {{searchName}})</p>
     <ul>
-        @for (city of cities; track city.id) {
+        @for (city of citiesDisplay; track city.id) {
             <li><a [routerLink]="['/city-fr/detail', city.id]">{{city.nom_standard}}</a></li>
         }
     </ul>
