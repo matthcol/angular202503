@@ -5,6 +5,7 @@ import { routes } from './app.routes';
 import localeFr from '@angular/common/locales/fr'
 import localeEs from '@angular/common/locales/es'
 import { registerLocaleData } from '@angular/common';
+import { provideHttpClient } from '@angular/common/http';
 
 registerLocaleData(localeFr);
 registerLocaleData(localeEs);
@@ -14,5 +15,6 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }), 
     provideRouter(routes),
     {provide: LOCALE_ID, useValue: 'fr-FR'}, // locale par défaut
+    provideHttpClient(),
   ]
 };
