@@ -2,9 +2,17 @@ import { Routes } from '@angular/router';
 import { CityListComponent } from './component/city-list/city-list.component';
 import { CityCardSimpleComponent } from './component/city-card-simple/city-card-simple.component';
 import { AppComponent } from './app.component';
+import { PageNotFoundComponent } from './component/pages/page-not-found/page-not-found.component';
+import { randomGuard } from './guard/random.guard';
+import { PageErrorComponent } from './component/pages/page-error/page-error.component';
 
 export const routes: Routes = [
-    {path: '', component: AppComponent},
-    {path: 'cities', component: CityListComponent},
-    {path: 'city-simple', component: CityCardSimpleComponent}
+    {path: '', redirectTo: "/cities", pathMatch: "full"},
+    {path: 'cities', title: "Liste Villes", component: CityListComponent},
+    {path: 'city-simple', title: "Ville Simple", 
+        canActivate: [randomGuard], component: CityCardSimpleComponent},
+    // NB1: possibilité d'avoir du chargement dynamique si beaucoup de routes
+    // NB2: charger des routes d'un module ou 1 fichier secondaire
+    {path: "error", component: PageErrorComponent},
+    {path: '**', component: PageNotFoundComponent}
 ];
