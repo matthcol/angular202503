@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { City } from '../../interface/city';
+import { City } from '../../../interface/city';
 
 @Component({
   // selector = tag name => <app-city-card-simple>

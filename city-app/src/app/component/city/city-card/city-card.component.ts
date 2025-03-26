@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { City } from '../../interface/city';
+import { City } from '../../../interface/city';
 import { UpperCasePipe } from '@angular/common';
-import { NotDefinedPipe } from '../../pipe/not-defined.pipe';
+import { NotDefinedPipe } from '../../../pipe/not-defined.pipe';
 
 
 @Component({

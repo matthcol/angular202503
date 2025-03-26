@@ -1,1 +1,24 @@
-<p>city-fr-create works!</p>
+<section>
+    <h2>Ajout nouvelle ville</h2>
+    <form [formGroup]="cityForm" (ngSubmit)="cityForm.valid && addCity()">
+        <p>
+        <label for="nom_standard">Nom</label>
+        <input type="text" formControlName="nom_standard">
+        {{ cityForm.controls.nom_standard.valid }}
+        </p>
+
+        <p>
+            <label for="code_postal">Code postal</label>
+            <input type="text" formControlName="code_postal">
+            {{ cityForm.controls.code_postal.valid }}
+        </p>
+
+        <p>
+            <label for="population">Population</label>
+            <input type="number" formControlName="population">
+            {{ cityForm.controls.population.valid }}
+        </p>
+
+        <button type="submit">Ajouter</button>
+    </form>
+</section>

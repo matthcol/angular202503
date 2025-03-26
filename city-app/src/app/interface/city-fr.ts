@@ -5,6 +5,6 @@ export interface CityFr {
     nom_standard: string
     dep_code?: string
     population?: number
-    latitude_centre?: number
-    longitude_centre?: number
+    latitude_mairie?: number
+    longitude_mairie?: number
 }

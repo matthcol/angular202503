@@ -1,11 +1,20 @@
 <section>
-    <h2>Ville ({{id}})</h2>
-    <ul>
-        <li>population:</li>
-        <li>département:</li>
-        <li>code postal:</li>
-    </ul>
-
-    <!-- todo -->
+    <h2>Ville {{city?.nom_standard}} (id={{id}})</h2>
+    @if(city){
+        <ul>
+            <li>population: {{ city.population}}</li>
+            <li>département: {{ city.dep_code}}</li>
+            <li>code postal: {{ city.code_postal }}</li>
+            <li>code INSEE: {{ city.code_insee }}</li>
+            <li>coordonnées centre: 
+                @if(city.longitude_mairie && city.latitude_mairie){
+                    (lon={{ city.longitude_mairie }}, lat={{ city.latitude_mairie }})
+                }
+            </li>
+        </ul>
+    }
+</section>
+<section>
+    <div id="map" style="height: 500px;width: 100%;"></div>
 </section>
 

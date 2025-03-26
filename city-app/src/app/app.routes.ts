@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
-import { CityListComponent } from './component/city-list/city-list.component';
-import { CityCardSimpleComponent } from './component/city-card-simple/city-card-simple.component';
-import { AppComponent } from './app.component';
+import { CityListComponent } from './component/city/city-list/city-list.component';
+import { CityCardSimpleComponent } from './component/city/city-card-simple/city-card-simple.component';
 import { PageNotFoundComponent } from './component/pages/page-not-found/page-not-found.component';
 import { randomGuard } from './guard/random.guard';
 import { PageErrorComponent } from './component/pages/page-error/page-error.component';

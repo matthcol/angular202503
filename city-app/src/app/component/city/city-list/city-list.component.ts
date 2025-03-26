@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { City } from '../../interface/city';
+import { City } from '../../../interface/city';
 import { DatePipe } from '@angular/common';
 import { CityCardComponent } from "../city-card/city-card.component";
 
